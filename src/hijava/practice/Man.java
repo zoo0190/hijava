@@ -7,6 +7,11 @@ public class Man {
 	private String name;
 	private int amount;
 	
+	@Override
+	public String toString() {
+		return name + "님의 잔액은 " + amount + "원 입니다.";
+	}
+
 	public Man() {
 		this.amount = 10000;
 	}
