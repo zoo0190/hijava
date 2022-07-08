@@ -8,14 +8,50 @@ public class Main {
 
 	public static void main(String[] args) {
 //		al();
+//		momAndSon();
+		eatTest();
+//		koreanAndAmerican();
+	}
+
+	private static void eatTest() {
+		Man korean = new Korean("홍길동");
+		Man american = new American("John");
+		
+		eat(american);
+	}
+
+	private static void eat(Man m) {
+		if (m instanceof Korean) {
+			((Korean)m).eatRice();
+		} else if (m instanceof American) {
+			((American)m).eatBread();
+		} else {
+			System.out.println("해당 인스턴스가 없습니다!");
+		}
+	}
+
+	private static void koreanAndAmerican() {
+		Man korean = new Korean("홍길동");
+		Man american = new American("John");
+		
+		sayHi(korean);
+		sayHi(american);
+	}
+	
+	private static void sayHi(Man man) {
+		man.sayHello();
+	}
+
+	private static void momAndSon() {
 		Mom mom = new Mom();
-		Son son = new Son();
+		Mom son = new Son();
 		
 		mom.eat();
 		son.eat();
 		
 		mom.say();
 		son.say();
+		
 	}
 
 	private static void al() {

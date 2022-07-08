@@ -59,4 +59,16 @@ public class Customer {
 		this.point = this.point + price * (this.rate / 100);
 		return restAmount;
 	}
+	
+	public int buy(Merchandise m) {
+		int restAmount = this.getAmount() - m.getPrice();
+		if (restAmount < 0) {
+			return -1;
+		}
+		
+		this.setAmount(restAmount);
+		this.setPoint(this.getPoint() + m.getPrice() * (this.getRate() / 100));
+		m.sell();
+		return restAmount;
+	}
 }

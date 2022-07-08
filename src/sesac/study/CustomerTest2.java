@@ -1,9 +1,8 @@
 package sesac.study;
 
 public class CustomerTest2 {
-
 	public static void main(String[] args) {
-		Customer2 cust11 = new Customer2("cust1", "YS", 30000);
+		Customer cust11 = new Customer("cust1", "YS", 30000);
 		Merchandise mer = new Merchandise("mer1", "SY", 16000);
 		
 		cust11.buy(mer);

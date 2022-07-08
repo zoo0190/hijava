@@ -21,6 +21,11 @@ public class Man {
 		this.name = name;
 	}
 	
+	public void sayHello() {
+		System.out.println("안녕하세요.");
+		System.out.println("제 이름은 " + this.getName() + "입니다.");
+	}
+	
 	public void buyCoffee(int count) {
 		this.subAmount(COFFEE, count);
 	}
@@ -62,5 +67,4 @@ public class Man {
 		System.out.println("hong = " + hong.getAmount());
 		System.out.println("john = " + john.getAmount());
 	}
-
 }
