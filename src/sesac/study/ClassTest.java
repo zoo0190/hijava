@@ -7,6 +7,8 @@ public class ClassTest {
 		
 		cus1.buy(10000);
 		cus1.buy(15000);
+		System.out.println(cus1.buy(15000));
+		
 		System.out.println(cus1.getPoint());
 		System.out.println(cus1.getAmount());
 	}

@@ -37,11 +37,17 @@ public class Customer {
 		this.amount = amount;
 	}
 	
+	public float getRate() {
+		return this.rate;
+	}
+	
 	public float getPoint() {
 		return this.point;
 	}
 	
-	
+	public void setPoint(float point) {
+		this.point = point;
+	}
 	
 	public int buy(int price) {
 		int restAmount = this.amount - price;
