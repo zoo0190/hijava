@@ -4,9 +4,9 @@ public class Customer {
 	private String id;
 	private String name;
 	private int amount;
-	private int rate = 2;
-	private int point;
-	
+	private float rate = 2;
+	private float point = 0;
+
 	public Customer (String id, String name, int amount) {
 		this.id = id;
 		this.name = name;
@@ -36,6 +36,12 @@ public class Customer {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
+	
+	public float getPoint() {
+		return this.point;
+	}
+	
+	
 	
 	public int buy(int price) {
 		int restAmount = this.amount - price;
