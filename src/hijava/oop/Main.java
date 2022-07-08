@@ -7,10 +7,49 @@ import hijava.practice.Man;
 public class Main {
 
 	public static void main(String[] args) {
+		netsport();
+//		animal();
+//		weight();
+//		AbstSuper sp = new AbstChild();
+//		int i = 5;
+//		int j = 10;
+//		
+//		System.out.println("min=" + sp.min(i, j) + ", max=" + sp.max(i, j));
 //		al();
 //		momAndSon();
-		eatTest();
+//		eatTest();
 //		koreanAndAmerican();
+	}
+
+	private static void netsport() {
+		NetSport pp = new PingPong();
+		NetSport te = new Tennis();
+		
+		pp.play();
+		System.out.println("----------------");
+		te.play();
+	}
+
+	private static void animal() {
+		Animal dog = new Dog();
+		Animal cat = new Cat();
+		
+		barkAnimal(dog);
+		barkAnimal(cat);
+
+	}
+
+	private static void barkAnimal(Animal ani) {
+		ani.bark();
+	}
+
+	private static void weight() {
+		Weight guen = new Guen();
+		Weight pound =  new Pound();
+		
+		int cnt = 5;
+		System.out.println("Guen=" + guen.getGram(cnt));
+		System.out.println("Pound=" + pound.getGram(cnt));
 	}
 
 	private static void eatTest() {
