@@ -41,7 +41,7 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		
 		while(true) {
-			String ret = inputScan(scanner, "계산하시겠어요?(계산: enter, 종료: quit)");
+			String ret = inputScan(scanner, "계산하시겠어요?(계산: enter, 종료: quit) ");
 			if ("quit".equalsIgnoreCase(ret)) break;
 			
 			int x = inputScanNumber(scanner, "첫번째 숫자(x)를 입력하세요. >> ");

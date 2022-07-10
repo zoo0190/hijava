@@ -55,16 +55,25 @@ public class Man {
 	}
 
 	public static void main(String[] args) {
+//		Man hong = new Man("Hong");
+//		Man john = new Man("John");
+//		
+//		hong.buyCoffee(1);
+//		hong.buyDonut(2);
+//		
+//		john.buyCoffee(2);
+//		john.buyDonut(1);
+//		
+//		System.out.println("hong = " + hong.getAmount());
+//		System.out.println("john = " + john.getAmount());
+		
 		Man hong = new Man("Hong");
-		Man john = new Man("John");
-		
-		hong.buyCoffee(1);
-		hong.buyDonut(2);
-		
-		john.buyCoffee(2);
-		john.buyDonut(1);
-		
-		System.out.println("hong = " + hong.getAmount());
-		System.out.println("john = " + john.getAmount());
+		Man kim = new Man("Kim");
+		Man kildong = hong;
+			
+		System.out.println(hong.hashCode());
+		System.out.println(kim.hashCode());
+		System.out.println(kildong.hashCode());
+		System.out.println( System.identityHashCode(kildong) );
 	}
 }
