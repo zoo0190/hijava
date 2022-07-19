@@ -14,8 +14,8 @@ public class Coll {
 	public static void main(String[] args) {
 //		lists();
 //		sets();
-//		treesets();
-		maps();
+		treesets();
+//		maps();
 	}
 
 	private static void maps() {

@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Objects;
 
-public class Student implements Cloneable {
+public class Student implements Cloneable, Comparable<Student> {
 	private int id;
 	private String name;
 	
@@ -65,6 +65,12 @@ public class Student implements Cloneable {
 	@Override
 	public String toString() {
 		return name + "(" + id + ")";
+	}
+	
+	@Override
+	public int compareTo(Student o) {
+		System.out.println("comp=" + this.id + "-" + o.id);
+		return (this.id - o.id) * -1;
 	}
 	
 	public static void main(String[] args) throws CloneNotSupportedException, ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
